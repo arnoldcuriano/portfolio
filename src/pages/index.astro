@@ -9,25 +9,38 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section
     id="intro"
     aria-labelledby="intro-title"
-    class="pt-20 pb-28 sm:pt-24 md:pt-32 md:pb-36"
+    class="pt-16 pb-28 sm:pt-20 md:pt-24 md:pb-36"
   >
-    <p class="mb-10 font-mono text-xs tracking-wide text-muted md:mb-14">
-      ARNOLD CURIANO / PHILIPPINES
-    </p>
-    <h1
-      id="intro-title"
-      class="max-w-5xl text-4xl leading-tight font-medium tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
-    >
-      Web Developer
-      <br />
-      <span class="text-muted">×</span> Full-Stack Developer
+    <div class="site-grid gap-y-3 font-mono text-xs tracking-wide text-muted">
+      <p class="col-span-4 md:col-span-6">ARNOLD CURIANO / PHILIPPINES</p>
+      <p class="col-span-4 md:col-start-7 md:col-span-6 md:justify-self-end">
+        <span aria-hidden="true">●</span> Available for international work
+      </p>
+    </div>
+    <h1 id="intro-title" class="hero-title mt-20 font-medium sm:mt-24 lg:mt-28">
+      <span class="block">Web Developer</span>
+      <span class="block">
+        <span class="whitespace-nowrap">
+          <span class="text-muted">×</span> Full-Stack
+        </span>{" "}
+        Developer
+      </span>
     </h1>
-    <div class="site-grid mt-14 border-t border-border pt-7 md:mt-20">
+    <div class="site-grid mt-20 gap-y-6 border-t border-border pt-6 md:mt-28 md:pt-8">
+      <p class="col-span-4 font-mono text-xs tracking-wide text-muted">
+        5+ YEARS IN DEVELOPMENT
+      </p>
       <p class="col-span-4 max-w-xl text-base leading-relaxed text-muted md:col-start-7 md:col-span-6 md:text-lg">
-        I work across frontend and backend development. I have 5+ years of
-        experience, and I’m based in the Philippines and available for
-        international work.
+        I build websites and applications across frontend and backend.
       </p>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .hero-title {
+    font-size: clamp(2.5rem, 5.4vw, 6rem);
+    line-height: 1.03;
+    letter-spacing: -0.055em;
+  }
+</style>

@@ -33,8 +33,10 @@ const links = [
     </nav>
 
     <button
+      id="menu-toggle"
       type="button"
-      popovertarget="mobile-navigation"
+      aria-controls="mobile-navigation"
+      aria-expanded="false"
       class="flex size-11 items-center justify-center md:hidden"
       aria-label="Menu"
     >
@@ -43,16 +45,13 @@ const links = [
         <span class="h-px w-5 bg-foreground"></span>
       </span>
     </button>
-    <nav
-      id="mobile-navigation"
-      popover
-      aria-label="Mobile"
-      class="fixed inset-x-5 top-18 z-20 m-0 w-auto border border-border bg-background p-2 md:hidden"
-    >
-      <ul class="font-mono text-sm tracking-wide">
+  </div>
+  <div id="mobile-navigation" class="mobile-panel" inert>
+    <nav aria-label="Mobile" class="min-h-0 overflow-hidden">
+      <ul class="site-container border-t border-border py-4 font-mono text-sm tracking-wide">
         {links.map(([label, href]) => (
           <li>
-            <a class="block min-h-11 px-3 py-3" href={href}>
+            <a class="flex min-h-12 items-center" href={href}>
               {label}
             </a>
           </li>
@@ -61,3 +60,44 @@ const links = [
     </nav>
   </div>
 </header>
+
+<style>
+  .mobile-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--motion-duration);
+  }
+
+  .mobile-panel:not([inert]) {
+    grid-template-rows: 1fr;
+  }
+
+  @media (min-width: 48rem) {
+    .mobile-panel {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>("#menu-toggle")!;
+  const panel = document.querySelector<HTMLElement>("#mobile-navigation")!;
+
+  const setOpen = (open: boolean) => {
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Menu");
+    panel.inert = !open;
+  };
+
+  toggle.addEventListener("click", () => setOpen(panel.inert));
+  toggle.closest("header")!.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !panel.inert) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+  panel.addEventListener("click", (event) => {
+    if (event.target instanceof Element && event.target.closest("a"))
+      setOpen(false);
+  });
+</script>

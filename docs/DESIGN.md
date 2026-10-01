@@ -44,7 +44,7 @@ The monospace face supports Inter; it must not turn the site into a terminal aes
 
 No brand gradient. No generated gradients. Do not introduce a decorative accent color merely because portfolios typically have one.
 
-Use `prefers-color-scheme` as the default theme source. A manual theme override is not required for v1 unless later requested.
+Use `prefers-color-scheme` as the initial theme source. A future accessible Light/Dark control should persist an explicit choice, let that choice override the OS preference, and prevent an incorrect-theme flash. Prefer native browser capabilities over React. The control is deferred beyond Phase 1.
 
 ## Width and Grid
 Use a **balanced** content width:
