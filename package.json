@@ -1,0 +1,26 @@
+{
+  "name": "arnold-curiano-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "format": "prettier --write \"src/**/*.{astro,ts,css}\" astro.config.mjs package.json tsconfig.json .prettierrc.json",
+    "format:check": "prettier --check \"src/**/*.{astro,ts,css}\" astro.config.mjs package.json tsconfig.json .prettierrc.json"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^8.0.2",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.5",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^1.1.0",
+    "typescript": "^5.9.3"
+  }
+}
