@@ -77,4 +77,5 @@ Use Anti-Slop to catch generic AI UI/copy patterns, weak responsive behavior, ac
 - Do not build the entire site in one pass.
 - Before adding a dependency, state what requirement it solves and why native/current dependencies are insufficient.
 - Run relevant format, type, build, and accessibility checks before declaring a phase complete.
+- After each implementation phase, inspect the actual Git diff and run `npm run review`. Review the diff with Ponytail and, when available, Anti-Slop. Report legitimate findings and fix those that do not conflict with `docs/DESIGN.md` or user requirements. Never claim an automated Anti-Slop review ran when its skill or tool was unavailable.
 - Preserve a clean public Git history with focused commits.
