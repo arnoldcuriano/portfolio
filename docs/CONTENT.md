@@ -5,7 +5,7 @@ Arnold Curiano
 
 ## Positioning
 Primary professional identity:
-**Web Developer × Full-Stack Developer**
+**Full-Stack Developer**
 
 Supporting professional facts:
 - 5+ years of development experience
@@ -13,6 +13,7 @@ Supporting professional facts:
 - experience includes websites, custom WordPress development, and full-stack applications
 - based in the Philippines
 - available for international opportunities/work
+- open to part-time, contract, and full-time work
 
 Do not invent a more specialized title such as "AI Developer" as the primary identity. AI Development is a capability.
 
@@ -29,21 +30,21 @@ Do not invent a more specialized title such as "AI Developer" as the primary ide
 The homepage should remain concise. Do not turn it into a complete resume.
 
 ## Navigation
-Visual direction uses numbered technical/editorial labels, e.g.:
-- `01 WORK`
-- `02 ABOUT`
-- `03 WRITING`
-- `04 CONTACT`
+Visual direction uses compact technical/editorial labels:
+- `WORK`
+- `ABOUT`
+- `WRITING`
+- `CONTACT`
 
 Resume and capabilities must remain easy to discover even if they are not both primary numbered navigation items.
 
 ## Hero Content Requirements
 Communicate:
-- Web Developer × Full-Stack Developer
+- Full-Stack Developer
 - 5+ years experience
 - frontend + backend capability
 - Philippines
-- internationally available
+- open to part-time, contract, and full-time work
 
 Final marketing copy should be concise and natural. Avoid hype and AI-style filler.
 

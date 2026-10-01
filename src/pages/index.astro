@@ -3,33 +3,34 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-  title="Arnold Curiano — Web Developer × Full-Stack Developer"
-  description="Arnold Curiano is a web and full-stack developer with 5+ years of experience, based in the Philippines and available internationally."
+  title="Arnold Curiano — Full-Stack Developer"
+  description="Arnold Curiano is a full-stack developer based in the Philippines with 5+ years of development experience."
 >
   <section
     id="intro"
     aria-labelledby="intro-title"
     class="pt-16 pb-28 sm:pt-20 md:pt-24 md:pb-36"
   >
-    <div class="site-grid gap-y-3 font-mono text-xs tracking-wide text-muted">
-      <p class="col-span-4 md:col-span-6">ARNOLD CURIANO / PHILIPPINES</p>
-      <p class="col-span-4 md:col-start-7 md:col-span-6 md:justify-self-end">
-        <span aria-hidden="true">●</span> Available for international work
-      </p>
-    </div>
+    <p class="font-mono text-xs tracking-wide text-muted">ARNOLD CURIANO</p>
     <h1 id="intro-title" class="hero-title mt-20 font-medium sm:mt-24 lg:mt-28">
-      <span class="block">Web Developer</span>
-      <span class="block">
-        <span class="whitespace-nowrap">
-          <span class="text-muted">×</span> Full-Stack
-        </span>{" "}
-        Developer
-      </span>
+      Full-Stack Developer
     </h1>
-    <div class="site-grid mt-20 gap-y-6 border-t border-border pt-6 md:mt-28 md:pt-8">
-      <p class="col-span-4 font-mono text-xs tracking-wide text-muted">
-        5+ YEARS IN DEVELOPMENT
-      </p>
+    <div class="site-grid mt-20 gap-y-12 border-t border-border pt-8 md:mt-28 md:pt-10">
+      <dl class="hero-facts col-span-4 font-mono text-xs tracking-wide md:col-span-6 md:text-sm">
+        <dt class="text-muted">Based in</dt>
+        <dd>Philippines</dd>
+        <dt class="text-muted">Experience</dt>
+        <dd>5+ years</dd>
+        <dt class="text-muted">Open to</dt>
+        <dd>
+          <span class="sr-only">Part-time, Contract, or Full-time</span>
+          <span class="open-to-values" aria-hidden="true">
+            <span>Part-time</span>
+            <span>Contract</span>
+            <span>Full-time</span>
+          </span>
+        </dd>
+      </dl>
       <p class="col-span-4 max-w-xl text-base leading-relaxed text-muted md:col-start-7 md:col-span-6 md:text-lg">
         I build websites and applications across frontend and backend.
       </p>
@@ -39,8 +40,70 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <style>
   .hero-title {
-    font-size: clamp(2.5rem, 5.4vw, 6rem);
+    font-size: clamp(3rem, 7.25vw, 6.5rem);
     line-height: 1.03;
     letter-spacing: -0.055em;
+  }
+
+  .hero-facts {
+    display: grid;
+    grid-template-columns: 6rem minmax(0, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 1.25rem;
+  }
+
+  .open-to-values {
+    display: inline-grid;
+    grid-template-areas: "value";
+    vertical-align: bottom;
+  }
+
+  .open-to-values > span {
+    grid-area: value;
+    opacity: 0;
+    animation: rotate-value 9s linear infinite;
+  }
+
+  .open-to-values > span:nth-child(2) {
+    animation-delay: -6s;
+  }
+
+  .open-to-values > span:nth-child(3) {
+    animation-delay: -3s;
+  }
+
+  @keyframes rotate-value {
+    0%,
+    28% {
+      opacity: 1;
+    }
+    32%,
+    99% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .hero-facts {
+      grid-template-columns: 8rem minmax(0, 1fr);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .open-to-values {
+      display: inline;
+    }
+
+    .open-to-values > span {
+      animation: none;
+      opacity: 1;
+    }
+
+    .open-to-values > span + span::before {
+      content: " / ";
+    }
   }
 </style>

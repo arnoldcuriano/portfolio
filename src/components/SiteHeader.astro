@@ -1,9 +1,9 @@
 ---
 const links = [
-  ["01 WORK", "/#work"],
-  ["02 ABOUT", "/#about"],
-  ["03 WRITING", "/#writing"],
-  ["04 CONTACT", "/#contact"],
+  ["WORK", "/#work"],
+  ["ABOUT", "/#about"],
+  ["WRITING", "/#writing"],
+  ["CONTACT", "/#contact"],
 ];
 ---
 
@@ -22,8 +22,9 @@ const links = [
         {links.map(([label, href]) => (
           <li>
             <a
-              class="inline-flex min-h-11 items-center underline-offset-4 hover:underline focus-visible:underline"
+              class="nav-link inline-flex min-h-11 items-center"
               href={href}
+              aria-label={label}
             >
               {label}
             </a>
@@ -51,7 +52,11 @@ const links = [
       <ul class="site-container border-t border-border py-4 font-mono text-sm tracking-wide">
         {links.map(([label, href]) => (
           <li>
-            <a class="flex min-h-12 items-center" href={href}>
+            <a
+              class="nav-link flex min-h-12 items-center"
+              href={href}
+              aria-label={label}
+            >
               {label}
             </a>
           </li>
@@ -62,6 +67,30 @@ const links = [
 </header>
 
 <style>
+  .nav-link::after {
+    content: " |";
+    opacity: 0;
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    opacity: 1;
+    animation: cursor-blink 1s steps(1, end) infinite;
+  }
+
+  @keyframes cursor-blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after {
+      animation: none;
+    }
+  }
+
   .mobile-panel {
     display: grid;
     grid-template-rows: 0fr;

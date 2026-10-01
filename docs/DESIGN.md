@@ -23,7 +23,7 @@ Use a restrained set of weights, likely 400/500/600 unless implementation proves
 
 ### Technical Accent
 Use a clean modern monospace typeface for subtle technical metadata such as:
-- `01 / WORK`
+- work section metadata
 - dates
 - roles
 - stack metadata
@@ -65,7 +65,7 @@ Avoid the large rounded-card language common to generated SaaS interfaces.
 ## Navigation
 Desktop direction:
 
-`AC.     01 WORK   02 ABOUT   03 WRITING   04 CONTACT`
+`AC.     WORK   ABOUT   WRITING   CONTACT`
 
 Navigation is technical/editorial and compact. Resume and capabilities remain accessible without making the primary navigation visually noisy; exact placement may be determined during implementation while preserving content discoverability.
 
@@ -79,9 +79,11 @@ Mobile:
 Use content-driven height, not an artificial `100vh` hero.
 
 Primary identity:
-**Web Developer × Full-Stack Developer**
+**Full-Stack Developer**
 
-The hero should quickly communicate what Arnold does, experience level, Philippines location, and international availability without excessive copy.
+The hero should quickly communicate what Arnold does, experience level, Philippines location, and approved work preferences without excessive copy.
+
+Structured hero metadata uses subdued labels and clear monospace values for location, experience, and work preferences. The Open to value cycles through Part-time, Contract, and Full-time; reduced-motion users see a stable presentation of all three.
 
 No decorative 3D objects, gradients, technology-logo clouds, fake code terminals, or oversized portrait.
 
@@ -139,6 +141,8 @@ Rules:
 
 ## Cursor
 Use the normal browser cursor globally.
+
+Navigation links may show a restrained text `|` after the active label on hover or keyboard focus. Reduced-motion users see it without blinking.
 
 A subtle custom cursor/label may be used only over interactive project media if it adds useful affordance. It must degrade cleanly on touch devices and reduced-motion contexts.
 
