@@ -3,9 +3,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-  title="Arnold Curiano — Web Developer"
-  description="Arnold Curiano is a web and full-stack developer based in the Philippines."
+  title="Arnold Curiano — Web Developer × Full-Stack Developer"
+  description="Arnold Curiano is a web and full-stack developer with 5+ years of experience, based in the Philippines and available internationally."
 >
-  <h1>Arnold Curiano</h1>
-  <p>Portfolio in development.</p>
+  <section
+    id="intro"
+    aria-labelledby="intro-title"
+    class="pt-20 pb-28 sm:pt-24 md:pt-32 md:pb-36"
+  >
+    <p class="mb-10 font-mono text-xs tracking-wide text-muted md:mb-14">
+      ARNOLD CURIANO / PHILIPPINES
+    </p>
+    <h1
+      id="intro-title"
+      class="max-w-5xl text-4xl leading-tight font-medium tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
+    >
+      Web Developer
+      <br />
+      <span class="text-muted">×</span> Full-Stack Developer
+    </h1>
+    <div class="site-grid mt-14 border-t border-border pt-7 md:mt-20">
+      <p class="col-span-4 max-w-xl text-base leading-relaxed text-muted md:col-start-7 md:col-span-6 md:text-lg">
+        I work across frontend and backend development. I have 5+ years of
+        experience, and I’m based in the Philippines and available for
+        international work.
+      </p>
+    </div>
+  </section>
 </BaseLayout>

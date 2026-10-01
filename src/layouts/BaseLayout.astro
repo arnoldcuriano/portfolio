@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/inter";
 import "../styles/global.css";
+import SiteHeader from "../components/SiteHeader.astro";
 
 interface Props {
   title: string;
@@ -31,7 +32,8 @@ const canonical =
     <a class="skip-link" href="#main">
       Skip to content
     </a>
-    <main id="main" class="site-container py-16">
+    <SiteHeader />
+    <main id="main" class="site-container">
       <slot />
     </main>
   </body>

@@ -1,0 +1,63 @@
+---
+const links = [
+  ["01 WORK", "/#work"],
+  ["02 ABOUT", "/#about"],
+  ["03 WRITING", "/#writing"],
+  ["04 CONTACT", "/#contact"],
+];
+---
+
+<header class="border-b border-border">
+  <div class="site-container flex h-18 items-center justify-between gap-6">
+    <a
+      class="inline-flex min-h-11 items-center text-xl font-semibold tracking-tight"
+      href="/#intro"
+      aria-label="Arnold Curiano, home"
+    >
+      AC.
+    </a>
+
+    <nav aria-label="Primary" class="hidden md:block">
+      <ul class="flex items-center gap-7 font-mono text-xs tracking-wide lg:gap-10">
+        {links.map(([label, href]) => (
+          <li>
+            <a
+              class="inline-flex min-h-11 items-center underline-offset-4 hover:underline focus-visible:underline"
+              href={href}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <button
+      type="button"
+      popovertarget="mobile-navigation"
+      class="flex size-11 items-center justify-center md:hidden"
+      aria-label="Menu"
+    >
+      <span class="flex flex-col gap-1.5" aria-hidden="true">
+        <span class="h-px w-5 bg-foreground"></span>
+        <span class="h-px w-5 bg-foreground"></span>
+      </span>
+    </button>
+    <nav
+      id="mobile-navigation"
+      popover
+      aria-label="Mobile"
+      class="fixed inset-x-5 top-18 z-20 m-0 w-auto border border-border bg-background p-2 md:hidden"
+    >
+      <ul class="font-mono text-sm tracking-wide">
+        {links.map(([label, href]) => (
+          <li>
+            <a class="block min-h-11 px-3 py-3" href={href}>
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
