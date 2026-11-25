@@ -23,16 +23,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <dd>5+ years</dd>
         <dt class="text-muted">Open to</dt>
         <dd>
-          <span class="sr-only">Part-time, Contract, or Full-time</span>
+          <span class="sr-only">Part-time or Full-time</span>
           <span class="open-to-values" aria-hidden="true">
             <span>Part-time</span>
-            <span>Contract</span>
             <span>Full-time</span>
           </span>
         </dd>
       </dl>
       <p class="col-span-4 max-w-xl text-base leading-relaxed text-muted md:col-start-7 md:col-span-6 md:text-lg">
-        I build websites and applications across frontend and backend.
+        I work across frontend and backend development. I have 5+ years of
+        experience, and I’m based in the Philippines and available for
+        international work.
       </p>
     </div>
   </section>
@@ -61,23 +62,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   .open-to-values > span {
     grid-area: value;
     opacity: 0;
-    animation: rotate-value 9s linear infinite;
+    animation: rotate-value 6s linear infinite;
   }
 
   .open-to-values > span:nth-child(2) {
-    animation-delay: -6s;
-  }
-
-  .open-to-values > span:nth-child(3) {
     animation-delay: -3s;
   }
 
   @keyframes rotate-value {
     0%,
-    28% {
+    45% {
       opacity: 1;
     }
-    32%,
+    50%,
     99% {
       opacity: 0;
     }

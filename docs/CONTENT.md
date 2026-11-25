@@ -13,7 +13,7 @@ Supporting professional facts:
 - experience includes websites, custom WordPress development, and full-stack applications
 - based in the Philippines
 - available for international opportunities/work
-- open to part-time, contract, and full-time work
+- open to part-time and full-time work
 
 Do not invent a more specialized title such as "AI Developer" as the primary identity. AI Development is a capability.
 
@@ -44,7 +44,7 @@ Communicate:
 - 5+ years experience
 - frontend + backend capability
 - Philippines
-- open to part-time, contract, and full-time work
+- open to part-time and full-time work
 
 Final marketing copy should be concise and natural. Avoid hype and AI-style filler.
 

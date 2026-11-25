@@ -83,7 +83,7 @@ Primary identity:
 
 The hero should quickly communicate what Arnold does, experience level, Philippines location, and approved work preferences without excessive copy.
 
-Structured hero metadata uses subdued labels and clear monospace values for location, experience, and work preferences. The Open to value cycles through Part-time, Contract, and Full-time; reduced-motion users see a stable presentation of all three.
+Structured hero metadata uses subdued labels and clear monospace values for location, experience, and work preferences. The Open to value cycles through Part-time and Full-time; reduced-motion users see a stable presentation of both.
 
 No decorative 3D objects, gradients, technology-logo clouds, fake code terminals, or oversized portrait.
 
