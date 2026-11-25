@@ -195,7 +195,7 @@ Analytics requirements:
 Analytics implementation must be handled with appropriate privacy/consent considerations before production launch.
 
 ## Deployment
-Initial hosting target: Vercel.
+Initial hosting target: GitHub Pages.
 
 A custom domain will be purchased/connected after development is sufficiently complete.
 

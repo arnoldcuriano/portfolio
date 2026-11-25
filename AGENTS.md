@@ -34,7 +34,7 @@ Build Arnold Curiano's public developer portfolio: professional, technical, prem
 - Tailwind CSS 4
 - Markdown/MDX for writing
 - Astro Content Collections for blog content
-- Vercel deployment target
+- GitHub Pages deployment target
 - GitHub repository is public
 
 Do not add a database, CMS, authentication, state-management library, component framework, or animation library unless a concrete requirement justifies it.

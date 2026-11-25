@@ -21,4 +21,4 @@ npm run build
 
 Blog entries will live in `src/content/blog` as Markdown or MDX. The collection is empty until approved writing is available.
 
-The site builds as static files for Vercel. Before launch, set the production `site` URL in `astro.config.mjs` so canonical URLs and a sitemap can be generated. No domain has been chosen yet.
+The site builds as static files for GitHub Pages at `https://arnoldcuriano.github.io/portfolio/`. Pushes to `main` deploy through `.github/workflows/deploy.yml`. A custom domain and sitemap are deferred.
